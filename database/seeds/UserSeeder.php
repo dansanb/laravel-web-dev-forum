@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
 
-        // create 20 users for testing
+        // create 50 users for testing
         for ($i=0; $i < 50; $i++) {           
             DB::table('users')->insert([
                 'name' => $faker->name,
