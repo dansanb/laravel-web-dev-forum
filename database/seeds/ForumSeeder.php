@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
+use Faker\Factory as Faker;
+
 
 class ForumSeeder extends Seeder
 {
@@ -12,7 +14,7 @@ class ForumSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        $faker = Faker::create();
         
         DB::table('forums')->insert([
             'name' => 'PHP',

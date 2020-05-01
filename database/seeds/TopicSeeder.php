@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
+use Faker\Factory as Faker;
 
 class TopicSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class TopicSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        $faker = Faker::create();
 
         // create 500 topics for testing
         for ($i=0; $i < 500; $i++) {           

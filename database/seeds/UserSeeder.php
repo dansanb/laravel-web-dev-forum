@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
+use Faker\Factory as Faker;
 
 class UserSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        $faker = Faker::create();
 
         // create 50 users for testing
         for ($i=0; $i < 50; $i++) {           
