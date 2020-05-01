@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class UserSeeder extends Seeder
 {
@@ -19,7 +20,8 @@ class UserSeeder extends Seeder
                 'name' => $faker->name,
                 'email' => $faker->unique()->safeEmail,
                 'password' => Hash::make('password'),
-                'remember_token' => Str::random(10)
+                'remember_token' => Str::random(10),
+                'created_at' => Carbon::now(),
             ]);
         }
     }
