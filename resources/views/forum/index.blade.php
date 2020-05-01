@@ -6,7 +6,11 @@
     <h1>Web Dev Forum</h1>
     <ul>
     @foreach($forums as $forum)
-        <li>{{ $forum->name }}</li>    
+        <li>
+            <a href="{{ action('ForumController@show', $forum->id) }}">
+                {{ $forum->name }}
+            </a> - {{ $forum->description }}
+        </li>
     @endforeach
     </ul>
 @endsection

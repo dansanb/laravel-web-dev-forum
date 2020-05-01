@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>App Name - @yield('title')</title>
+        <title>Web Development Forum - @yield('title')</title>
     </head>
     <body>        
         <div class="container">
