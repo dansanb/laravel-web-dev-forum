@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Forum;
 
-class ForumController extends Controller
+class TopicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class ForumController extends Controller
      */
     public function index()
     {
-        $forums = Forum::all();
-        return view('forum.index')->with('forums', $forums);
+        //
     }
 
     /**
@@ -47,8 +45,7 @@ class ForumController extends Controller
      */
     public function show($id)
     {
-        $forum = Forum::with('topics')->findOrFail($id);
-        return view('forum.show')->with('forum', $forum);
+        //
     }
 
     /**
