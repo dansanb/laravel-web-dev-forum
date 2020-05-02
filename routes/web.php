@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 route::resource('/forums', 'ForumController');
+route::resource('/topics', 'TopicController');

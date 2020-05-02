@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Topic;
 
 class TopicController extends Controller
 {
@@ -45,7 +46,8 @@ class TopicController extends Controller
      */
     public function show($id)
     {
-        //
+        $topic = Topic::with('forum')->with('replies')->findOrFail($id);
+        return view('topic.show')->with('topic', $topic);
     }
 
     /**

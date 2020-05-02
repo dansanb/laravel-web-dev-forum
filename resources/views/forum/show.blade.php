@@ -7,7 +7,7 @@
     <ul>
     @foreach($forum->topics as $topic)
         <li>
-            <a href="{{ $topic->id }}">
+            <a href="{{ action('TopicController@show', $topic->id) }}">
                 {{ $topic->title }}
             </a>
         </li>
